@@ -9,10 +9,10 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class MaerkRegisterController {
 
-	
 	@RequestMapping("/maerkRegister")
-    public String showRegistrationForm() {
-    
-		return "redirect:/home.html"; 
-    }
+	public String showRegister() {
+
+		return "markRegister";
+	}
+
 }
