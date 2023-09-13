@@ -5,8 +5,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class AddController {
-@RequestMapping("/add")
+@RequestMapping("/Add")
 	public String addRegi() {
-	return "AddEnd";
+	return "Add";
 }
 }
