@@ -20,6 +20,10 @@
 		SELECT * FROM snsdata
 		WHERE name LIKE CONCAT('%', #{keyword}, '%')
 </select>
+<select  id="selectBySNSname">
+	SELECT * FROM snsdata
+	WHERE SNSname = #{SNSname}
+</select>
 
 <insert id="add" parameterType="MaerkRegister">
 
