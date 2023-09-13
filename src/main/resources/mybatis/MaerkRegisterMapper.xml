@@ -15,6 +15,16 @@
 
 <select id="selectByName"></select>
 
+<select id="selectByUserName" resultType="Member"
+		parameterType="string">
+		SELECT * FROM snsdata
+		WHERE name LIKE CONCAT('%', #{keyword}, '%')
+</select>
 
+<insert id="add" parameterType="MaerkRegister">
+
+ INSERT INTO snsdata VALUES
+      (NULL, #{name}, #{UserName}, #{SNSname}, #{URL})
+</insert>
 
 </mapper>
