@@ -15,13 +15,13 @@
 
 	<select id="selectByName"></select>
 
-	<select id="selectByUserName" resultType="Member"
+	<select id="selectByUserName" resultType="MaerkRegister"
 		parameterType="string">
 		SELECT * FROM snsdata
 		WHERE name LIKE CONCAT('%',
 		#{keyword}, '%')
 	</select>
-	<select id="selectBySNSname">
+	<select id="selectBySNSname" resultType="MaerkRegister">
 		SELECT * FROM snsdata
 		WHERE SNSname = #{SNSname}
 	</select>
