@@ -8,6 +8,6 @@ public class AddEndController {
 
 	@RequestMapping("/addEnd")
 	public String addRegiEnd() {
-		return "AddEnd";
+		return "addEnd";
 	}
 }
