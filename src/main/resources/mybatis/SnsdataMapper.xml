@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.example.app.mapper.MaerkRegisterMapper">
+<mapper namespace="com.example.app.mapper.SnsdataMapper">
 
-	<insert id="add" parameterType="MaerkRegister">
-
+	<insert id="add" parameterType="Snsdata">
 		INSERT INTO snsdata VALUES
-		(NULL, #{name}, #{UserName}, #{SNSname}, #{URL})
+		(NULL, #{name}, #{userName}, #{snsName}, #{url})
 	</insert>
 
 </mapper>
