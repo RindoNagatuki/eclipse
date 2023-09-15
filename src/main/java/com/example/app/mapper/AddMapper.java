@@ -2,8 +2,10 @@ package com.example.app.mapper;
 
 import java.util.List;
 
-import com.example.app.domain.Add;
+import org.apache.ibatis.annotations.Mapper;
 
+import com.example.app.domain.Add;
+@Mapper
 public interface AddMapper {
 
 	List<Add> selectByUserName(String UserName);
