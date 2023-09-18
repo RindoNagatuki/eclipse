@@ -1,22 +1,25 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" xmlns:th="http://www/thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>U&Lリンク集</title>
+    <title>U&Lリンク</title>
 </head>
 
 <body>
     <header>
-        <h1>追加</h1>
+        <h1>配信者アカウント登録</h1>
     </header>
-    <form action="" method="post">
-        <p>アカウント名
-        	<input type="text" name=UserName />
+    <form action="" method="post" th:object="${snsdata}">
+        <p>配信者名
+            <input type="text" th:field="*{userName}">
         </p>
-        <p>SNS
-            <select name="SNSname">
+        <p>アカウント名
+            <input type="text" th:field="*{name}">
+        </p>
+        <p>SNS名
+            <select th:field="*{snsName}">
                 <option value="YouTube">YouTube</option>
                 <option value="X">X(旧Twitter)</option>
                 <option value="FaceBook">FaceBook</option>
@@ -24,10 +27,11 @@
             </select>
         </p>
         <p>URL
-            <input type="url" name="URL">
+            <input type="url"th:field=*{url}>
         </p>
-        <button type="submit" formaction="addEnd" name="button_a" >登録</button>        
+    <input type="submit" value="登録">
     </form>
+    <p><a href="/home">ホームに戻る</a></p>
 </body>
 
 </html>
