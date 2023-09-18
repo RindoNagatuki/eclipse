@@ -3,9 +3,14 @@
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.app.mapper.SnsdataMapper">
 
-	<insert id="add" parameterType="Snsdata">
+	<insert id="register" parameterType="snsdata">
 		INSERT INTO snsdata VALUES
-		(NULL, #{name}, #{userName}, #{snsName}, #{url})
+		(#{id}, #{name}, #{userName}, #{snsName}, #{url})
 	</insert>
 
+	<update id="add" parameterType="snsdata">
+		UPDATE snsdata 
+		SET userName = #{userName}, snsName = #{snsName}, url = #{url}
+		WHERE id = #{id}
+	</update>
 </mapper>

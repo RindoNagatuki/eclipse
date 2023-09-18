@@ -7,6 +7,7 @@ import com.example.app.domain.Snsdata;
 @Mapper
 public interface SnsdataMapper {
 
+	void register(Snsdata snsdata);
 	void add(Snsdata snsdata);
-	
 }
+

@@ -32,7 +32,7 @@ public class RegisterController {
 		if(errors.hasErrors()) {
 			return "addSns";
 		}
-		mapper.add(snsdata);;
+		mapper.add(snsdata);
 		return "redirect:/addSnsEnd";
 	}
 	
@@ -57,7 +57,7 @@ public class RegisterController {
 		if(errors.hasErrors()) {
 			return "addUser";
 		}
-		mapper.add(snsdata);
+		mapper.register(snsdata);
 		return "redirect:/addUserEnd";
 	}
 	
